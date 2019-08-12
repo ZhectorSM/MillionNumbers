@@ -31,7 +31,7 @@ This project was created using the following tools:
 1. Type the name of the Original random file
 2. Type the name of the Sorted file
 3. Good job! You have generated and sorted a Million Random Numbers.
-4. The files generated are in the root folder of the project
+4. The files generated are in the target folder of the project
 
 ###### Assumptions
 
