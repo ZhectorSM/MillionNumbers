@@ -7,6 +7,8 @@ package com.hector.millionrandom;
 
 import java.io.IOException;
 import java.nio.file.NoSuchFileException;
+import java.time.Duration;
+import java.time.LocalTime;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -35,6 +37,9 @@ public class MillionRandom {
         }
         
         
+        LocalTime start = LocalTime.now();
+        LOG.log(Level.INFO, "Processing...");
+               
         //Creation of numbers
         try{
             GenerateNumbers.randomGenerator(originalFile);  
@@ -60,9 +65,15 @@ public class MillionRandom {
             System.exit(-1);
         }
         
+        LocalTime end = LocalTime.now();        
+        Duration duration = Duration.between(start, end);
         
+              
         //Success
-        JOptionPane.showMessageDialog(null, "Process succesfully completed!");
+        JOptionPane.showMessageDialog(null, "Process succesfully completed!\n"
+                + "\n Origin File: " + originalFile + ".csv"
+                + "\n Sorted File: " + destinyFile + ".csv"
+                + "\n Execution time: " + duration.toMillis() + " millisecs." );
         
     }
 }

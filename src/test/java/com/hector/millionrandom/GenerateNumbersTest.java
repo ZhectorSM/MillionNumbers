@@ -6,7 +6,6 @@
 package com.hector.millionrandom;
 
 import java.io.File;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import static org.junit.Assert.*;
 import org.junit.Test;
